@@ -4,7 +4,7 @@
 \usepackage[dvips]{graphicx}
 \usepackage[dvips]{epsfig}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[english]{babel}
 \usepackage{alltt}
 \usepackage{templates/algorithm}
 \usepackage{templates/algorithmic}
@@ -105,10 +105,11 @@
 
 \HRule
 \begin{center}
-        {\Huge Proyecto } \\[2.5mm] 
-        {\Huge Título del Artículo} \\[5mm]
+        {\Huge Proyecto de la asignatura Computacion Avanzada } \\[2.5mm] 
+        {\Huge Título del Artículo :   Solving simulation optimization problems on grid computing systems
+} \\[5mm]
 
-        {\Large Autor } \\[10mm]
+        {\Large Autor : YOUSEF RAJAEITABRIZI} \\[10mm]
 
         {\em Computación Avanzada} \\[5mm]
         Lenguajes y Sistemas Informáticos \\[5mm]
@@ -126,18 +127,28 @@
 \begin{abstract}
 {\em
 
-El objetivo de este trabajo ha sido ....
+%El objetivo de este trabajo ha sido ....
 %
-bla, bla, bla
+%bla, bla, bla
 %
-bla, bla, bla
+%bla, bla, bla
 %
-bla, bla, bla
+%bla, bla, bla
+The main novelty of this paper is the use of grid computing for solving (iterative) simulation optimization problems.
+The global guidance system of the search method is asked to reach and select a near-optimum solution in a relatively short time; it may have a significant improvement with computing resources that work in parallel as much as possible, by exploring larger subsets of feasible configurations of the model.
+ The policy designed to arrange the exploration is a crucial part of the whole algorithm to be designed for the optimum seeking problem at hand.
+Moreover, at an inner level, a specific subset of computing resources may have their own capability of:
+
+• parallel execution of stochastic simulation;
+
+• parallel replication of stochastic simulation to get an adequate level of statistical confidence on the performance
+
+indices of the assigned configurations, during the (outer) optimization process.
 
 }
 
 \begin{palabrasClave}
-Palabra reservada1, Palabra reservada2, ...
+Queuing model :One way to mostrate setting of ships.
 \end{palabrasClave}
 
 \end{abstract}
@@ -150,27 +161,26 @@ Palabra reservada1, Palabra reservada2, ...
 % No funciona bien \markboth sin "twoside" en \documentclass, pero al
 % ponerlo se dan un mont�n de errores de underfull \vbox, con lo que no se
 % ha puesto.
-\markboth{Nombre del alumno}{Título del trabajo}
+\markboth{YOUSEF RAJAEITABRIZI}{Solving simulation optimization problems on grid computing systems}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Numeracion en romanos
 \renewcommand{\thepage}{\roman{page}}
 \setcounter{page}{1}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\tableofcontents
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\listoffigures
+%\tableofcontents
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\listoftables
+%\listoffigures
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage{\pagestyle{empty}\cleardoublepage}
+
+%\listoftables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage{\pagestyle{empty}\cleardoublepage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Numeracion a partir del capitulo I
@@ -184,42 +194,67 @@ Palabra reservada1, Palabra reservada2, ...
 \label{chapter:obj}
 
 \input{tex/cap1.tex}
+%""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+\begin{center}
+\includegraphics[width=1\textwidth]{images/pic4.eps}\\[0.25cm]
+\end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Fundamentos teóricos}
 \label{chapter:teo}
 
 \input{tex/cap2.tex}
+%""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+\begin{center}
+\includegraphics[width=1\textwidth]{images/pic5.eps}\\[0.25cm]
+\end{center}
+%""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Procedimiento experimental}
 \label{chapter:exp}
 
 \input{tex/cap3.tex}
+%""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+\begin{center}
+\includegraphics[width=1\textwidth]{images/pic9.eps}\\[0.25cm]
+\end{center}
+%""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+%""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+\begin{center}
+\includegraphics[width=1\textwidth]{images/pic10.eps}\\[0.25cm]
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Conclusiones}
 \label{chapter:conclusiones}
 
 \input{tex/cap4.tex}
-
+%""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+\begin{center}
+\includegraphics[width=1\textwidth]{images/pic13.eps}\\[0.25cm]
+\end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\begin{center}
+\includegraphics[width=1\textwidth]{images/pic14.eps}\\[0.25cm]
+\end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \thispagestyle{empty}
-\begin{appendix}
+%\begin{appendix}
 
-\chapter{Título del Apéndice 1}
-\label{appendix:1}
+%\chapter{Título del Apéndice 1}
+%\label{appendix:1}
 
-\input{tex/apendice1.tex}
+%\input{tex/apendice1.tex}
 
-\chapter{Título del Apéndice 2}
-\label{appendix:2}
+%\chapter{Título del Apéndice 2}
+%\label{appendix:2}
 
-\input{tex/apendice2.tex}
+%\input{tex/apendice2.tex}
 
-\end{appendix}
+%\end{appendix}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \addcontentsline{toc}{chapter}{Bibliografía}
@@ -227,6 +262,7 @@ Palabra reservada1, Palabra reservada2, ...
 
 
 \bibliography{bib/references}
+
 \nocite{*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

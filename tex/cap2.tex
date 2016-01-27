@@ -1,19 +1,39 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Chapter 2: Fundamentos Teóricos 
+% Chapter 2: The simulation optimization model requisitos : 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-En este capítulo se han de presentar los antecedentes teóricos y prácticos que
-apoyan el tema objeto de la investigación.
-
+In the berth planning problem, we should answer the following questions:
+ how many segments do we organize for active shipping services? 
+ how many cranes – out of the total, fixed, number of available ones  do we allocate for each of the organized segments? 
+ to which segment do we forward incoming vessels, provided that we may base this decision on some suitable attributes shared by any given subset of the active services? 
+Answers to these questions are provided by the simulation optimization approach.
+3.2. Grid enabled versions for the SARP algorithm
+With the aim of developing grid versions of the SARP algorithm described above (in the sequel G-SARP),
+we have adopted a master/worker approach [16,4,19].
+Let p be the number of workers. At iteration k, the master creates p + 1 perturbations of a same configuration
+of the system (i.e. p + 1 neighbours of the current solution), keeps for itself the first generated configuration
+to be estimated and sends the others to the workers (one configuration for each worker). Each processor,
+including the master, must decide if its own configuration can be accepted or not. If a processor accepts its
+own solution (according to the acceptance criterion of SARP), then sends it to the master. If the master has
+new solutions to examine, it selects the next configuration, otherwise it keeps the old one. There are different
+rules for selection; for example, the master can choose the configuration with the best estimated performance
+(best strategy) or it can make a random choice (random strategy). We have implemented both, and we present in
+ 4 and 5 illustrate the master and the worker process, respectively. In
+our computational scheme, different workers carry out simulation experiments on different neighbours.
+In other words, through the grid platform, we explore a richer neighbourhood at each iteration and perform
+a more effective procedure for optimization via simulation; whereas SARP simply uses a simulated
+annealing routine, G-SARP integrates simulated annealing with a sampling routine. To this purpose, a point
+of synchronization between the master and the workers is needed to evaluate the results of sampling, update
+current solution and redefine the neighbours.
+Our procedure has been tuned as follows.
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-\section{Primer apartado del segundo capítulo}
-\label{2:sec:1}
-  Primer párrafo de la primera sección.
+%\section{Primer apartado del segundo capítulo}
+%\label{2:sec:1}
+%  Primer párrafo de la primera sección.
 
-\section{Segundo apartado del segundo capítulo}
-\label{2:sec:2}
-  Primer párrafo de la segunda sección.
+%\section{Segundo apartado del segundo capítulo}
+%\label{2:sec:2}
+%  Primer párrafo de la segunda sección.
 

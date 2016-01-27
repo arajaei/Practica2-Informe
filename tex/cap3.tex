@@ -1,51 +1,74 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Chapter 3: Procedimiento experimental 
+% Chapter 3: Computational experiments 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Este capítulo ha de contar con seccciones para la descripción de los experimentos 
-y del material.
-%
-También debe haber una sección para los resultados obtenidos y una última de 
-análisis de los resultados.
+In our master/worker approach, the master keeps track of the pool of configurations dispatched to the workers. Thus, whenever a worker is subjected to crashes, the master can reassign the same configuration to another worker. On the contrary, whenever the master node crashes there is no way to recover the instantaneous state of the computational procedure. To react at the occurrence of a master crash, we have implemented a periodic checkpoint. Specifically, at a sequence of suitable time points when no messages are in transit back from any worker, the value of the best feasible solution up to current time is recorded and, also, the list of the ‘‘latest’’ parallel configurations that have been dispatched to the workers is saved in a file system. In such a way the G-SARP algorithm can be restarted from latest perturbation step.
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\section{Descripción de los experimentos}
-\label{3:sec:1}
+%\section{Descripción de los experimentos}
+%\label{3:sec:1}
 
-bla, bla, etc. 
+%bla, bla, etc. 
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\section{Descripción del material}
-\label{3:sec:2}
+%\section{Descripción del material}
+%\label{3:sec:2}
 
-bla, bla, etc. 
+%bla, bla, etc. 
 
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\section{Resultados obtenidos}
-\label{3:sec:3}
+%\section{Resultados obtenidos}
+%\label{3:sec:3}
 
-bla, bla, etc. 
+%bla, bla, etc. 
 
 
 %------------------------------------------------------------------------------
-\begin{figure}[!th]
-\begin{center}
-\includegraphics[width=0.75\textwidth]{images/figura1.eps}
-\caption{Ejemplo de figura}
-\label{fig:1}
-\end{center}
-\end{figure}
+%\begin{figure}[!th]
+%\begin{center}
+%\includegraphics[width=0.50\textwidth]{images/figura1.eps}
+%\caption{Ejemplo de figura}
+%\label{fig:1}
+%\end{center}
+%\end{figure}
 %------------------------------------------------------------------------------
 
 
 %------------------------------------------------------------------------------
-\input{tables/table.tex}
+%\input{tables/table.tex}
 %------------------------------------------------------------------------------
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\section{Análisis de los resultados}
+\section{ Computational experiments}
 \label{3:sec:4}
 
-bla, bla, etc. 
+%bla, bla, etc. 
 
+
+The potential benefit of grid computing has been evaluated against the combinatorial number of queuing
+network configurations to be simulated by the workers. To get an idea of this number in a possible scenario’s
+analysis, consider the case of Gioia Tauro port cited in Section 2. Once the terminal manager has fixed ‘‘n’’
+berthing points (about 10–12) along the quay (3.3 km long) then he has to displace all the available berth
+cranes (15–18 units, mounted on rail) along the berthing positions and, moreover, he has to assign each shipping
+service (out of more than 20) to its own berthing point.
+The grid platform used in the experiments is a portion of the campus grid at University of Calabria characterized
+by a network of super-computers, physically located in different centres within the campus area. The
+heterogeneous computing resources used are described in Table 1.
+Wall-clock time experienced by us to get a satisfactory solution for this problem is of the order of some
+hours. Hence, considering that in a real organisational framework simulation optimization problems are
+expected to run on a network of slower workstations or even PCs, one may recognize that grid computing
+appears to be the unique cost effective tool which can provide proper solutions to decision problems in a reasonable
+amount of time for the terminal manager.
+The efficient and transparent execution  is supported by, a complete implementation
+of the MPI-1 standard that uses the Globus Toolkit collection of software components (services). In particular,
+the  command of the Globus Toolkit activates the execution of  programs to
+manage process execution, access to remote files and so on. We have observed that MPI program can be performed
+without any changes, as in a common parallel program.
+Using a master/worker approach with a well structured procedure, like G-SARP, it seems natural to ensure
+a fault tolerant computing [9] by the common practice of checkpoints. By considering the problem of the node
+crash, the programmer is asked to implement a policy to manage with two different types of crashes: a crash of
+the master node, and a crash of a worker node. Our technique for tolerating failure of one or more workers is
+based on a simple idea. In our master/worker approach, the master keeps track of the pool of configurations
+dispatched to the workers. Thus, whenever a worker is subjected to crashes, the master can reassign the same
+configuration to another worker. On the contrary,

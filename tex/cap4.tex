@@ -1,5 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Chapter 4: Conclusiones y Trabajos Futuros 
+% Chapter 4: Conclusion and future work
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-bla, bla, bla, etc.
+We have designed and implemented on a grid platform a simulation optimization algorithm that requires a limited amount of communication and a minimal synchronization among computing resources. It could be used for a cost-effective solution of logistics decision problems at seaport container terminals. Numerical evidence shows that as the number of workers increases, the quality of the final solution improves. A crucial role is played by the optimal compromise between searching the entire feasible region (exploration) and locally searching promising sub-regions (exploitation).
+Numerical results are presented to compare the quality of solutions for different number of processors
+employed, taking as reference 14 test problems which differ in the following parameters: profit values, number
+of shipping services, maximum number of berth segments and budget. In particular, simulation runs have been
+executed without resorting to any parallel computing capability, even though this could be implemented
+according to the guidelines in Section 4. Here we concentrate on isolating the trend of improvement of the
+neighbourhood exploration algorithm (simulated annealing with sampling) as the number of workers
+increases, under both the alternative strategies (best and random) for updating the current solution. The
+improvement of the quality of the final solution appears more significant as the complexity of the test problem
+increases. In this case, the practical possibility of exploring a richer sub-region of the solution space increases
+substantially by using a larger number of workers. Hence, an interesting research issue raised by the master–
+worker framework is that of finding the most effective balance between the explorative work carried out by
+the workers (all together) on an intelligent partition of the entire feasible region and the exploitative work
+by one worker within one sub-region.
